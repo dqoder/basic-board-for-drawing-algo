@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graphix board</title>
+    <link rel="stylesheet" href="css/sketch-css.css">
+    <!-- <script src="/lib/p5.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <script type="module" src="scripts/board.js" defer></script>
+    <!-- <script src="scripts/bc.js" type="module" defer></script> -->
+</head>
+
+<body>
+    <div id="p5canvas-container">
+        <div id="p5axes" class="p5c"></div>
+    </div>
+
+    <div id="button-for-hide-show">
+    </div>
+
+    <div id="form-container" class="open">
+        <div class=" make-a-distance-from-above">
+            <div class="form-input-container indent unselectable">
+                <label for="gridOption">Grid</label>
+                <input type="checkbox" name="gridOption" id="gridOption" checked>
+
+                <!-- <label for="mcdOption">show mouse coodinates</label>
+                <input type="checkbox" name="mcdOption" id="mcdOption" checked> -->
+
+                <label for="scaleRange">Scale</label>
+                <input type="range" name="scaleRange" id='scaleOption' step="1" min="7" max="70" value=10>
+
+                <label for="resetOrigin">origin</label>
+                <input type="button" name="resestOrigin" id='resetOrigin' value="RESET" class='submit-button'>
+                <!--match value with axesCanvas.mjs::SCALE-->
+            </div>
+
+
+            <div class="object-list" id="shape-object-list">
+            </div>
+
+
+            <div class="indent form-input-container make-a-distance-from-above unselectable">
+                <label for="newObject">make new</label>
+                <select name="newObject" id="createNewObject">
+                    <option value="select">select</option>
+                    <option value="line">Line</option>
+                    <option value="circle">Circle</option>
+                    <option value="ellipse">Ellipse</option>
+                </select>
+            </div>
+            <div id="new-object-details" class="indent make-a-small-distance-from-above unselectable"></div>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
