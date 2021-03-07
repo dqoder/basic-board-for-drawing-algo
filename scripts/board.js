@@ -1,8 +1,5 @@
-// not relative; server treat static(public) as root
-// relative (../my-lib/drawAxes.mjs) could also have worked
-// import p5 from 'p5';
-import axesP5 from '/.my-lib/axesCanvas.mjs'
-import { circleBHBoard, circleMPBoard, lineBHBoard, ellipseMPBoard } from '/.my-lib/curveBoards.mjs'
+import axesP5 from '/lib/axesCanvas.mjs'
+import { circleBHBoard, circleMPBoard, lineBHBoard, ellipseMPBoard } from '/lib/curveBoards.mjs'
 
 const SHAPE_ID = 'shape-'
 const BOARD_ID = 'board-'
